@@ -1,0 +1,1356 @@
+/* ==========================================================================
+   DESIGN SYSTEM - TORNEARIA FRESADORA UNIVERSO
+   Estilo: Industrial Premium, Sólido, Corporativo e Sofisticado
+   Cores: Azul (#303fbf), Amarelo (#FFCC00), Branco e variações de cinza escuro/claro
+   ========================================================================== */
+
+:root {
+    --primary: #303fbf;          /* Azul Universo */
+    --primary-light: #4e5ddc;    /* Azul Claro de Destaque */
+    --accent: #FFCC00;           /* Amarelo Industrial */
+    --accent-hover: #e6b800;
+    
+    /* Fundos Escuros */
+    --bg-dark: #0f1225;          /* Marinho Escuro da Marca */
+    --bg-deep: #080a16;          /* Azul quase preto para rodapé/detalhes */
+    
+    /* Fundos Claros */
+    --bg-light: #ffffff;
+    --bg-light-alt: #f6f8ff;      /* Azul-cinza suave */
+
+    /* Cores de Texto */
+    --text-light: #ffffff;
+    --text-muted: #abb4d6;
+    --text-dark: #0f1225;
+    --text-dark-muted: #4e5575;
+
+    /* Bordas e Sombras */
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-color-light: rgba(15, 18, 37, 0.08);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --border-radius-lg: 16px;
+    --border-radius-md: 8px;
+    --max-width: 1200px;
+}
+
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Componentes de Estilo */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 30px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: var(--border-radius-md);
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(48, 63, 191, 0.35);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(48, 63, 191, 0.5);
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.25);
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    border: 1px solid var(--border-color-light);
+    color: var(--text-dark);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: rgba(48, 63, 191, 0.1);
+    border: 1px solid rgba(48, 63, 191, 0.25);
+    color: var(--primary-light);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.section-badge-yellow {
+    background-color: rgba(255, 204, 0, 0.1);
+    border: 1px solid rgba(255, 204, 0, 0.3);
+    color: var(--accent);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.section-title span {
+    color: var(--accent);
+}
+
+.section-subtitle {
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* 1. Cabeçalho Superior Flutuante Arredondado (Apenas da Logo ao Botão) */
+.navbar {
+    position: fixed;
+    top: 20px; /* Espaço no topo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: var(--max-width); /* Limita o tamanho máximo */
+    z-index: 1000;
+    background-color: var(--accent); /* Fundo Amarelo */
+    border-radius: 50px; /* Cantos arredondados em toda a extensão do bloco */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    transition: var(--transition);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px; /* Altura reduzida em 20% (de 80px para 64px) */
+    padding: 0 15px 0 0; /* Menos espaçamento na direita do botão, zero na esquerda da logo */
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 101px; /* Aumentado em 15% (de 88px para 101px) */
+    width: 156px;  /* Aumentado em 15% (de 136px para 156px) */
+    object-fit: contain;
+    display: block;
+    background-color: #ffffff;
+    border-radius: 80px / 55px; /* Ajuste proporcional da elipse */
+    padding: 4px 10px; /* Padding reduzido para a logo ocupar mais o espaço interno */
+    border: 4px solid var(--accent); /* Integra na cor amarela do menu */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateX(-10px); /* Mantém integrado na curva inicial esquerda */
+    z-index: 1002;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    margin-left: auto;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-btn {
+    background-color: var(--primary);
+    color: #ffffff !important;
+    padding: 8px 22px;
+    border-radius: 30px; /* Botão também arredondado combinando */
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(48, 63, 191, 0.25);
+    border: 2px solid var(--primary);
+    margin-left: 10px;
+}
+
+.nav-btn:hover {
+    background-color: transparent;
+    color: var(--primary) !important;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(48, 63, 191, 0.3);
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+}
+
+/* 2. Hero Section (Sem overlays escuros / Filtros e Tela Inteira) */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Enquadra perfeitamente na tela do computador */
+    min-height: 750px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-bottom: 4px solid var(--primary);
+    padding: 100px 0 0 0; /* Desconto da altura do header */
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 800px;
+    transform: translateY(-40px); /* Sobe o texto e título do hero */
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem; /* Ajustado para impacto visual */
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: #ffffff;
+    /* Filtro de sombra nas letras para leitura em alta visibilidade */
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.95), 0 2px 4px rgba(0, 0, 0, 0.85);
+}
+
+.hero-title span {
+    color: var(--accent);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.95), 0 2px 4px rgba(0, 0, 0, 0.85);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #ffffff; /* Texto branco puro para alto contraste */
+    margin-bottom: 40px;
+    max-width: 650px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* 3. Urgency Banner (Apenas faixa amarela sólida decorativa/divisória sem escrita ruim) */
+.urgency-banner {
+    background-color: var(--accent);
+    height: 8px; /* Reduzido para ser uma faixa decorativa refinada */
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.urgency-content {
+    display: none; /* Escondendo o texto */
+}
+
+/* 4. Stats Section (Faixa Fina e Sofisticada em Azul #222c84) */
+.stats-section {
+    background-color: #222c84; /* Tom azul exato solicitado, elegante e sem neon */
+    color: var(--text-light);
+    padding: 35px 0; /* Padding drasticamente reduzido para virar uma faixa fina sofisticada */
+    position: relative;
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.15);
+    overflow: visible;
+}
+
+/* Posicionadores das Ondas SVG */
+.wave-separator {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Altura aumentada para exibir ondulações bem pronunciadas */
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-top {
+    top: -59px;
+}
+
+.wave-bottom {
+    bottom: -59px;
+}
+
+.wave-separator svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    gap: 15px;
+    position: relative;
+    z-index: 5;
+}
+
+.stat-card {
+    padding: 12px 15px; /* Tamanho do card interno menor para virar uma faixa compacta */
+    background: rgba(255, 255, 255, 0.05); /* Fundo sutil para sofisticação */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--border-radius-md);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: 2.3rem; /* Tamanho reduzido para manter a proporção da faixa elegante */
+    font-weight: 800;
+    color: var(--accent); /* Amarelo da Marca */
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 5. Capacidade e Infraestrutura */
+.infra-section {
+    padding: 100px 0;
+    background-color: var(--bg-light-alt);
+    color: var(--text-dark);
+}
+
+.infra-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.infra-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color-light);
+    border-left: 5px solid var(--accent); /* Detalhe amarelo: Linha de destaque lateral na esquerda do card */
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    overflow: hidden; /* Garante que a imagem respeite a borda arredondada do card */
+    min-height: 220px; /* Altura mínima estável para manter o formato retangular */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+
+.infra-card:hover {
+    border-color: var(--accent); /* Detalhe amarelo: borda muda para amarelo no hover */
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 204, 0, 0.12); /* Sombra amarela sutil no hover */
+}
+
+.infra-image-box {
+    width: 45%; /* Metade aproximada para a foto */
+    height: 100%;
+    flex-shrink: 0;
+    border-right: 3px solid var(--accent); /* Detalhe amarelo: linha separadora entre foto e texto */
+}
+
+.infra-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.infra-info {
+    width: 55%; /* Metade para o texto */
+    padding: 30px; /* Padding interno generoso para afastar o texto da foto e das bordas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infra-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Detalhe amarelo: traço decorativo abaixo do título do card */
+.infra-info h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent);
+    margin-top: 6px;
+    border-radius: 2px;
+}
+
+.infra-info p {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--text-dark-muted);
+}
+
+/* 6. Serviços (Carrossel) */
+.services-section {
+    padding: 100px 0;
+    background-color: #222c84; /* Fundo azul sofisticado e elegante */
+    color: var(--text-light);
+}
+
+.services-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background-color: #ffffff; /* Fundo branco solicitado */
+    border: 1px solid var(--border-color-light);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card-image {
+    height: 240px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 5px solid #ffffff; /* Linha de moldura agora branca combinando com o fundo do card */
+}
+
+.service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-card-image img {
+    transform: scale(1.06);
+}
+
+.service-card-content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-dark); /* Texto em preto/escuro */
+    text-transform: uppercase;
+}
+
+.service-card-text {
+    color: var(--text-dark-muted); /* Texto descritivo escuro */
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.service-features-list {
+    list-style: none;
+}
+
+.service-features-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--text-dark); /* Lista em preto/escuro */
+}
+
+.service-features-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #171b35;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.carousel-control:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+.carousel-control.prev { left: 0; }
+.carousel-control.next { right: 0; }
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.indicator.active {
+    background-color: var(--accent);
+    width: 24px;
+    border-radius: 10px;
+}
+
+/* 7. Catalog Teaser Section (Tamanho de Tela Inteira e Detalhes Amarelos) */
+.catalog-section {
+    min-height: calc(100vh - 80px); /* Ocupa o tamanho da tela do computador descontando o topo */
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    background-color: var(--bg-light-alt);
+    color: var(--text-dark);
+    position: relative;
+}
+
+.catalog-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.catalog-content h2 {
+    color: var(--text-dark);
+    font-size: 2.6rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--accent); /* Detalhe amarelo: linha vertical decorativa de destaque */
+    padding-left: 20px;
+}
+
+.catalog-content p {
+    color: var(--text-dark-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.catalog-content .section-badge {
+    background-color: rgba(255, 204, 0, 0.15); /* Detalhe amarelo suave no badge */
+    color: #cca300;
+    border: 1px solid rgba(255, 204, 0, 0.3);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.catalog-content .btn-primary {
+    background-color: var(--accent); /* Detalhe amarelo: botão principal em amarelo destacado */
+    color: var(--text-dark);
+    border: 2px solid var(--accent);
+}
+
+.catalog-content .btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.catalog-visual {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Detalhe amarelo: moldura decorativa posicionada por trás do contêiner da imagem */
+.catalog-visual::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 4px solid var(--accent); /* Detalhe moldura amarela */
+    border-radius: var(--border-radius-lg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.catalog-visual-wrapper {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color-light);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    z-index: 2; /* Fica acima da moldura decorativa amarela */
+    width: 100%;
+    height: 480px; /* Altura ideal fixada */
+}
+
+.catalog-visual-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche o bloco com a nova imagem */
+    display: block;
+}
+
+/* 8. Quem Somos / Sobre Nós (Tela Inteira, Fundo Azul e Detalhes Amarelos) */
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    background-color: #222c84; /* Fundo azul exato solicitado */
+    color: var(--text-light);
+    position: relative;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.about-content h2 {
+    font-size: 2.6rem;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    border-left: 5px solid var(--accent); /* Detalhe amarelo no título */
+    padding-left: 20px;
+}
+
+.about-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 24px;
+}
+
+.about-visual {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Detalhe amarelo: moldura decorativa posicionada por trás do contêiner da imagem da empresa */
+.about-visual::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 4px solid var(--accent); /* Detalhe moldura amarela */
+    border-radius: var(--border-radius-lg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.about-visual-wrapper {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Fica acima da moldura decorativa amarela */
+    width: 100%;
+    height: 450px; /* Altura ideal fixada */
+}
+
+.about-visual-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche perfeitamente o retângulo */
+    display: block;
+}
+
+/* 9. Maquinário (Carrossel Interativo com Detalhes Amarelos) */
+.machinery-section {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.machinery-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.machinery-carousel-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: calc(100% - 120px);
+}
+
+.machinery-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.machinery-card {
+    flex: 0 0 33.333%; /* 3 cards visíveis simultaneamente */
+    max-width: 33.333%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--bg-light-alt);
+    border: 1px solid var(--border-color-light);
+    border-top: 4px solid var(--accent); /* Detalhe amarelo: borda superior */
+    border-radius: var(--border-radius-lg);
+    margin: 0 10px;
+    transition: var(--transition);
+}
+
+.machinery-card:hover {
+    border-color: var(--accent); /* Ilumina em amarelo no hover */
+    background-color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 204, 0, 0.1);
+}
+
+.machinery-emoji {
+    color: var(--accent); /* Cor amarela do ícone */
+    background-color: rgba(255, 204, 0, 0.1);
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: var(--transition);
+}
+
+.machinery-emoji i {
+    width: 28px;
+    height: 28px;
+}
+
+.machinery-card:hover .machinery-emoji {
+    background-color: var(--accent);
+    color: var(--text-dark);
+}
+
+.machinery-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+    text-transform: uppercase;
+}
+
+.machinery-card p {
+    color: var(--text-dark-muted);
+    font-size: 0.95rem;
+}
+
+/* 9.5. Seção de Localização (Fundo #222c84 e Detalhes Amarelos) */
+.map-section {
+    padding: 100px 0;
+    background-color: #222c84; /* Fundo azul exato solicitado */
+    color: #ffffff;
+    position: relative;
+}
+
+.map-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.map-badge {
+    background-color: rgba(255, 204, 0, 0.15); /* Detalhe amarelo no badge */
+    color: var(--accent);
+    border: 1px solid rgba(255, 204, 0, 0.3);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.map-title {
+    font-size: 2.6rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--accent); /* Detalhe amarelo vertical */
+    padding-left: 20px;
+}
+
+.map-desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.map-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 35px;
+}
+
+.map-detail-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.map-detail-icon {
+    color: var(--accent); /* Ícones de contato em amarelo */
+    background-color: rgba(255, 204, 0, 0.1);
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.map-detail-icon i {
+    width: 20px;
+    height: 20px;
+}
+
+.map-detail-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.map-detail-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.map-container {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    height: 480px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 4px solid var(--accent); /* Detalhe moldura amarela no mapa */
+}
+
+.map-container iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* 10. FAQ Accordion */
+.faq-section {
+    padding: 100px 0;
+    background-color: var(--bg-light-alt);
+    color: var(--text-dark);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color-light);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item.active {
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(48, 63, 191, 0.06);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left;
+    color: var(--text-dark);
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.faq-chevron {
+    color: var(--text-dark-muted);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-chevron {
+    transform: rotate(180deg);
+    color: var(--primary);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer p {
+    padding: 0 24px 24px;
+    color: var(--text-dark-muted);
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(15, 18, 37, 0.04);
+}
+
+/* 11. Footer (Fundo Azul #222c84, Letras Claras e Detalhes Amarelos - 15% Mais Fino) */
+.footer {
+    background-color: #222c84; /* Fundo azul exato solicitado */
+    border-top: 3px solid var(--accent); /* Detalhe amarelo na borda superior */
+    padding: 65px 0 0; /* Reduzido de 80px para 65px (~15% mais fino) */
+    color: var(--text-light); /* Letras claras */
+}
+
+.footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px 50px; /* Reduzido de 60px para 50px */
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    position: relative;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.footer-about {
+    color: rgba(255, 255, 255, 0.8); /* Texto legível claro */
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.logo-footer {
+    margin-bottom: 20px;
+}
+
+.logo-footer img {
+    height: 80px; /* Aumentado em ~30% (de 60px para 80px) */
+    filter: none; /* Mantém as cores originais da logo */
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--accent); /* Fundo amarelo nos ícones */
+    color: var(--text-dark); /* Ícone preto */
+    transition: var(--transition);
+}
+
+.footer-socials .social-icon i {
+    width: 20px; /* Garante tamanho visível para o SVG */
+    height: 20px;
+    display: block;
+}
+
+.footer-socials .social-icon:hover {
+    background-color: #ffffff;
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    padding-left: 6px;
+}
+
+.footer-hours {
+    list-style: none;
+}
+
+.footer-hours li {
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.footer-hours .days {
+    display: block;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.footer-hours .hours {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-contact {
+    list-style: none;
+}
+
+.footer-contact li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    align-items: flex-start;
+}
+
+.footer-contact li i {
+    color: var(--accent); /* Ícones em amarelo contrastando no fundo azul */
+    flex-shrink: 0;
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+}
+
+.footer-contact li span,
+.footer-contact li div a {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.footer-contact li div a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* 12. Responsiveness */
+@media (max-width: 991px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        border-bottom: 1px solid var(--border-color-light);
+        flex-direction: column;
+        padding: 30px 24px;
+        gap: 24px;
+        align-items: stretch;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .nav-menu.active {
+        max-height: 400px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-btn {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px 0;
+    }
+
+    .stat-card:not(:nth-child(3n)) {
+        border-right: 1px solid var(--border-color-light);
+    }
+    
+    .stat-card:nth-child(3) {
+        border-right: none;
+    }
+
+    .infra-grid,
+    .catalog-container,
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-visual {
+        order: -1;
+    }
+
+    .machinery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .services-carousel-container {
+        max-width: calc(100% - 80px);
+    }
+
+    .service-slide {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-card:not(:last-child) {
+        border-right: none;
+    }
+    
+    .stat-card {
+        border-bottom: 1px solid var(--border-color-light);
+        padding-bottom: 15px;
+    }
+
+    .machinery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
