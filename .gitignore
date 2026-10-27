@@ -1,0 +1,7 @@
+# Dependências e caches
+.DS_Store
+Thumbs.db
+*.log
+
+# Pastas de backup locais
+backup/

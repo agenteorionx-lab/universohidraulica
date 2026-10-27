@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História | Em Breve | Tornearia Fresadora Universo</title>
+    <meta name="description" content="Conheça a trajetória de mais de três décadas da Tornearia Fresadora Universo em Vilhena/RO. Em breve disponibilizaremos nossa linha do tempo e marcos históricos.">
+    
+    <!-- Google Fonts: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="index.css?v=3.5">
+
+    <style>
+        /* Ajuste de proporção para a página limpa Em Breve */
+        body {
+            background-color: var(--bg-light-alt);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .coming-soon-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 160px 24px 100px; /* Desconto do cabeçalho flutuante */
+            text-align: center;
+        }
+
+        .coming-soon-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color-light);
+            border-radius: var(--border-radius-lg);
+            padding: 60px 40px;
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--accent);
+        }
+
+        .coming-soon-card .section-badge {
+            margin-bottom: 16px;
+        }
+
+        .coming-soon-card h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .coming-soon-card h1 span {
+            color: var(--primary);
+        }
+
+        .coming-soon-card p {
+            font-size: 1.1rem;
+            color: var(--text-dark-muted);
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        .coming-soon-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 767px) {
+            .coming-soon-section {
+                padding: 130px 16px 60px;
+            }
+
+            .coming-soon-card {
+                padding: 40px 24px;
+            }
+
+            .coming-soon-card h1 {
+                font-size: 2.5rem;
+            }
+
+            .coming-soon-btns {
+                flex-direction: column;
+            }
+
+            .coming-soon-btns .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Cabeçalho (Navbar Idêntica ao Site) -->
+    <header class="navbar" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagens/logo/Logo%20oficial.png" alt="Tornearia Fresadora Universo">
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html#hero" class="nav-link">Início</a>
+                <a href="index.html#services" class="nav-link">Serviços</a>
+                <a href="index.html#about" class="nav-link">Empresa</a>
+                <a href="catalogo.html" class="nav-link">Catálogo</a>
+                <a href="index.html#visite-nos" class="nav-link">Localização</a>
+                <a href="https://wa.me/556933213929" target="_blank" class="nav-btn">
+                    Contato
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Central: "Em Breve" com Identidade Institucional -->
+    <main class="coming-soon-section">
+        <div class="container">
+            <div class="coming-soon-card">
+                <div class="section-badge">
+                    <i data-lucide="award"></i> Tradição Desde 1993
+                </div>
+                <h1>Em <span>Breve</span></h1>
+                <p>
+                    Estamos preparando uma página especial com o resgate histórico, fotografias de época e os principais marcos das nossas mais de três décadas de dedicação à indústria e ao agronegócio de Rondônia.
+                </p>
+                <div class="coming-soon-btns">
+                    <a href="index.html" class="btn btn-secondary" style="color: var(--text-dark); border-color: var(--border-color-light); background: var(--bg-light-alt);">
+                        <i data-lucide="arrow-left"></i> Voltar ao Início
+                    </a>
+                    <a href="https://wa.me/556933213929?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20a%20equipe%20da%20Tornearia%20Universo." target="_blank" class="btn btn-accent">
+                        <i data-lucide="message-square"></i> Falar Conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé (Idêntico ao do Site) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-block main-block">
+                <a href="index.html" class="logo-footer">
+                    <img src="imagens/logo/Logo%20oficial.png" alt="Tornearia Fresadora Universo">
+                </a>
+                <p class="footer-about">Desde 1993 oferecendo soluções em metalmecânica, tornearia convencional/CNC, soldas especiais e recuperação técnica com máxima precisão e durabilidade.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/torneariauniverso/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Siga a Tornearia Universo no Instagram @torneariauniverso">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <span>@torneariauniverso</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-block">
+                <h4 class="footer-title">Links Úteis</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#hero">Início</a></li>
+                    <li><a href="index.html#services">Serviços</a></li>
+                    <li><a href="index.html#about">Empresa</a></li>
+                    <li><a href="historia.html">Nossa História</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="index.html#visite-nos">Localização</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-block">
+                <h4 class="footer-title">Funcionamento</h4>
+                <ul class="footer-hours">
+                    <li>
+                        <span class="days">Segunda a Sexta-feira:</span>
+                        <span class="hours">07:30 às 11:30 e 13:30 às 17:30</span>
+                    </li>
+                    <li>
+                        <span class="days">Origem:</span>
+                        <span class="hours">Vilhena / RO - Suporte Interestadual</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-block">
+                <h4 class="footer-title">Contato & Endereço</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i data-lucide="phone-call"></i>
+                        <div>
+                            <a href="tel:+556933213929">(69) 3321-3929</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i data-lucide="map-pin"></i>
+                        <span>Av. Celso Mazutti, 2821 – Jardim América, Vilhena - RO</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Tornearia Fresadora Universo. Todos os direitos reservados. · <a href="termos-de-uso.html" class="legal-link">Termos de Uso</a> · <a href="politica-de-privacidade.html" class="legal-link">Privacidade (LGPD)</a></p>
+                <div class="developer-credit">
+                    <span>Desenvolvido por</span>
+                    <a href="https://orionxbrasil.com/" target="_blank" rel="noopener noreferrer" class="orionx-badge" aria-label="OrionX Brasil - Desenvolvimento Web">
+                        <img src="imagens/logo/orionx.png" alt="OrionX Brasil" class="orionx-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interatividade -->
+    <script>
+        // Inicializa Lucide Icons
+        lucide.createIcons();
+
+        // Menu Mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.setAttribute('data-lucide', 'x');
+                } else {
+                    icon.setAttribute('data-lucide', 'menu');
+                }
+                lucide.createIcons();
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                });
+            });
+        }
+    </script>
+</body>
+</html>

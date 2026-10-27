@@ -14,7 +14,34 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=3.8">
+
+    <!-- ========================================================================= -->
+    <!-- FERRAMENTAS DE ANÁLISE E MÉTRICAS (Clarity & Google Analytics)            -->
+    <!-- Insira os IDs oficiais abaixo quando disponíveis:                          -->
+    <!-- ========================================================================= -->
+
+    <!-- Google Analytics 4 (GA4) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <!-- Microsoft Clarity -->
+    <!--
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "SEU_CLARITY_ID");
+    </script>
+    -->
 </head>
 <body>
 
@@ -22,17 +49,17 @@
     <header class="navbar" id="header">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <img src="imagens/logo/logo.png" alt="Tornearia Fresadora Universo">
+                <img src="imagens/logo/Logo%20oficial.png" alt="Tornearia Fresadora Universo">
             </a>
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
                 <i data-lucide="menu"></i>
             </button>
-            <nav class="nav-menu" id="navMenu">
+                        <nav class="nav-menu" id="navMenu">
                 <a href="#hero" class="nav-link">Início</a>
-                <a href="#about" class="nav-link">Empresa</a>
                 <a href="#services" class="nav-link">Serviços</a>
+                <a href="#about" class="nav-link">Empresa</a>
+                <a href="#catalog" class="nav-link">Catálogo</a>
                 <a href="#visite-nos" class="nav-link">Localização</a>
-                <a href="#faq" class="nav-link">Dúvidas</a>
                 <a href="https://wa.me/556933213929" target="_blank" class="nav-btn">
                     Contato
                 </a>
@@ -52,7 +79,7 @@
                 </p>
                 <div class="hero-ctas">
                     <a href="https://wa.me/556933213929" target="_blank" class="btn btn-accent">
-                        <i data-lucide="message-square"></i> Conversar via Whatsapp
+                        <i data-lucide="message-square"></i> Solicitar Orçamento
                     </a>
                     <a href="#services" class="btn btn-secondary">
                         Conhecer Serviços
@@ -72,23 +99,23 @@
         </div>
         <div class="container stats-container">
             <div class="stat-card">
-                <h3 class="stat-number">32</h3>
+                <h3 class="stat-number" data-target="32" data-prefix="" data-suffix="">32</h3>
                 <p class="stat-label">Anos de Tradição</p>
             </div>
             <div class="stat-card">
-                <h3 class="stat-number">3.000m²</h3>
+                <h3 class="stat-number" data-target="3000" data-prefix="" data-suffix="m²" data-format="thousand">3.000m²</h3>
                 <p class="stat-label">Área Fabril</p>
             </div>
             <div class="stat-card">
-                <h3 class="stat-number">+20mil</h3>
+                <h3 class="stat-number" data-target="20" data-prefix="+" data-suffix="mil">+20mil</h3>
                 <p class="stat-label">Peças Produzidas</p>
             </div>
             <div class="stat-card">
-                <h3 class="stat-number">+5mil</h3>
+                <h3 class="stat-number" data-target="5" data-prefix="+" data-suffix="mil">+5mil</h3>
                 <p class="stat-label">Clientes Satisfeitos</p>
             </div>
             <div class="stat-card">
-                <h3 class="stat-number">4</h3>
+                <h3 class="stat-number" data-target="4" data-prefix="" data-suffix="">4</h3>
                 <p class="stat-label">Estados Atendidos</p>
             </div>
         </div>
@@ -100,128 +127,101 @@
         </div>
     </section>
 
-    <!-- 5. Capacidade e Infraestrutura (Fundo Claro) -->
-    <section class="infra-section" id="capacidade">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Do Componente Milimétrico ao Maquinário Pesado</h2>
-                <p class="section-subtitle">Dispomos de um parque de máquinas diversificado e robusto que comporta usinagem, soldagem e recuperação de peças de praticamente todos os diâmetros e comprimentos.</p>
-            </div>
-
-            <div class="infra-grid">
-                <div class="infra-card">
-                    <div class="infra-image-box">
-                        <img src="imagens/infra_escala.png" alt="Flexibilidade de Escala" class="infra-card-img">
-                    </div>
-                    <div class="infra-info">
-                        <h3>Flexibilidade de Escala</h3>
-                        <p>Equipamentos de alta performance preparados tanto para o micro-torneamento de pinos de precisão quanto para a usinagem pesada de grandes eixos e camisas industriais.</p>
-                    </div>
-                </div>
-                
-                <div class="infra-card">
-                    <div class="infra-image-box">
-                        <img src="imagens/infra_medida.png" alt="Fabricação Sob Medida" class="infra-card-img">
-                    </div>
-                    <div class="infra-info">
-                        <h3>Fabricação Sob Medida</h3>
-                        <p>Capacidade para desenvolver peças complexas e engrenagens gigantescas a partir de desenhos técnicos, amostras desgastadas ou projetos conceituais.</p>
-                    </div>
-                </div>
-
-                <div class="infra-card">
-                    <div class="infra-image-box">
-                        <img src="imagens/infra_solda.png" alt="Soldagem de Elementos Robustos" class="infra-card-img">
-                    </div>
-                    <div class="infra-info">
-                        <h3>Soldagem de Elementos Robustos</h3>
-                        <p>Área de caldeiraria e solda estrutural equipada para unir e preencher materiais espessos e ligas especiais com segurança homologada.</p>
-                    </div>
-                </div>
-
-                <div class="infra-card">
-                    <div class="infra-image-box">
-                        <img src="imagens/infra_recuperacao.png" alt="Recuperação de Componentes" class="infra-card-img">
-                    </div>
-                    <div class="infra-info">
-                        <h3>Recuperação de Componentes</h3>
-                        <p>Reconstrução integral de peças de grande porte que sofreram desgaste severo, devolvendo a geometria nominal de fábrica e reduzindo drasticamente os custos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Nossos Serviços (Fundo #222c84) -->
+    <!-- 3. Nossos Serviços Especializados (Fundo Claro) -->
     <section class="services-section" id="services">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Soluções Especializadas em Metalmecânica</h2>
-                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Processos de altíssima precisão com controle rigoroso de qualidade e materiais selecionados.</p>
+                <h2 class="section-title" >Serviços Especializados de Alta Precisão</h2>
+                <p class="section-subtitle" >Do componente milimétrico ao maquinário pesado: processos certificados com controle rigoroso de qualidade e materiais nobres.</p>
             </div>
 
-            <div class="services-grid-3">
+            <div class="services-grid-4">
                 
-                <!-- Card 1: Usinagem -->
+                <!-- Card 1: Usinagem & Tornearia -->
                 <div class="service-card">
-                    <div class="service-card-image">
-                        <img src="imagens/servico_usinagem.png" alt="Usinagem e Tornearia">
+                    <div class="service-card-image service-slider">
+                        <img src="imagens/servi%C3%A7os/Torneamento%20de%20precis%C3%A3o%20em%20torno%20industrial.png" alt="Torneamento de precisão em torno industrial" class="service-slide active">
+                        <img src="imagens/servi%C3%A7os/Torno%20industrial%20em%20a%C3%A7%C3%A3o%20com%20fluido%20de%20corte.png" alt="Torno industrial em ação com fluido de corte" class="service-slide">
                     </div>
                     <div class="service-card-content">
-                        <h3 class="service-card-title">Usinagem & Tornearia</h3>
-                        <p class="service-card-text">Torneamento e modelagem impecável de aço, metais ferrosos e não ferrosos (como bronze, alumínio, latão e cobre).</p>
-                        <ul class="service-features-list">
-                            <li>Usinagem de cilindros de alta complexidade</li>
-                            <li>Roscas de diversos perfis e passos</li>
-                            <li>Eixos, buchas e eixos-árvore sob medida</li>
-                        </ul>
+                        <h3 class="service-card-title">Usinagem & Tornearia CNC</h3>
+                        <p class="service-card-text">Torneamento convencional e CNC de alta capacidade para modelagem impecável de aços especiais, ligas nobres e peças industriais.</p>
                     </div>
                 </div>
 
-                <!-- Card 2: Fresagem -->
+                <!-- Card 2: Fresagem & Engrenagens -->
                 <div class="service-card">
-                    <div class="service-card-image">
-                        <img src="imagens/servico_fresagem.png" alt="Fresagem CNC">
+                    <div class="service-card-image service-slider">
+                        <img src="imagens/servi%C3%A7os/Engrenagem%20sob%20chuva%20de%20%C3%B3leo.png" alt="Engrenagem sob chuva de óleo" class="service-slide active">
+                        <img src="imagens/servi%C3%A7os/Engrenagem%20Industrial%20em%20M%C3%A1quina%20Verde%20Desgastada.png" alt="Engrenagem Industrial em Máquina Verde Desgastada" class="service-slide">
+                        <img src="imagens/servi%C3%A7os/Maquina%C3%A7%C3%A3o%20de%20engrenagem%20com%20%C3%B3leo%20industrial.png" alt="Maquinação de engrenagem com óleo industrial" class="service-slide">
                     </div>
                     <div class="service-card-content">
                         <h3 class="service-card-title">Fresagem & Engrenagens</h3>
-                        <p class="service-card-text">Fresagem convencional e CNC para criar componentes geométricos complexos e engrenamentos de alto desempenho.</p>
-                        <ul class="service-features-list">
-                            <li>Corte de engrenagens retas e helicoidais</li>
-                            <li>Rasgos de chaveta e estriados precisos</li>
-                            <li>Acoplamentos e reduções customizadas</li>
-                        </ul>
+                        <p class="service-card-text">Usinagem de geometrias complexas e engrenamentos de alto rendimento mecânico com tolerâncias centesimais.</p>
                     </div>
                 </div>
 
-                <!-- Card 3: Solda -->
+                <!-- Card 3: Soldas Especiais & Caldeiraria -->
                 <div class="service-card">
-                    <div class="service-card-image">
-                        <img src="imagens/servico_soldagem.png" alt="Solda Industrial">
+                    <div class="service-card-image service-slider">
+                        <img src="imagens/servi%C3%A7os/servico_soldagem.png" alt="Soldas Especiais e Caldeiraria" class="service-slide active">
+                        <img src="imagens/servi%C3%A7os/Jato%20abrasivo%20em%20rotor%20industrial%20aferrujado.png" alt="Jato abrasivo em rotor industrial enferrujado" class="service-slide">
+                        <img src="imagens/servi%C3%A7os/Repara%C3%A7%C3%A3o%20de%20Maquinaria%20Industrial%20com%20Fa%C3%ADscas.png" alt="Reparação de Maquinaria Industrial com Faíscas" class="service-slide">
                     </div>
                     <div class="service-card-content">
-                        <h3 class="service-card-title">Solda Especializada</h3>
-                        <p class="service-card-text">Comportamos quase todos os tipos de soldagem para reparo, união ou reconstrução de componentes desgastados.</p>
-                        <ul class="service-features-list">
-                            <li>Soldas em ferro fundido, aço inox e alumínio</li>
-                            <li>Recuperação de componentes de alta fadiga</li>
-                            <li>Soldas de grande penetração e resistência</li>
-                        </ul>
+                        <h3 class="service-card-title">Soldas Especiais & Caldeiraria</h3>
+                        <p class="service-card-text">Processos homologados de soldagem para união, preenchimento e reconstrução estrutural de componentes sob extrema fadiga.</p>
                     </div>
+                </div>
+
+                <!-- Card 4: Recuperação de Cilindros Hidráulicos -->
+                <div class="service-card">
+                    <div class="service-card-image service-slider">
+                        <img src="imagens/servi%C3%A7os/Cilindros%20Hidr%C3%A1ulicos%20no%20Armaz%C3%A9m.png" alt="Cilindros Hidráulicos no Armazém" class="service-slide active">
+                        <img src="imagens/servi%C3%A7os/Cilindro%20hidr%C3%A1ulico%20numa%20oficina%20industrial.png" alt="Cilindro hidráulico numa oficina industrial" class="service-slide">
+                    </div>
+                    <div class="service-card-content">
+                        <h3 class="service-card-title">Cilindros Hidráulicos</h3>
+                        <p class="service-card-text">Reforma integral de sistemas hidráulicos pesados para os setores agrícola, florestal, transporte e indústrias da região.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Quem Somos / Sobre Nós (Fundo com Foto Fixa / Parallax) -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-framed-box">
+                <span class="about-badge">
+                    <i data-lucide="award"></i> Tradição e Excelência
+                </span>
+                <h2 class="about-title">Mais de Três Décadas de Compromisso com a Indústria</h2>
+                <p class="about-text">
+                    Fundada em 1993 na cidade de Vilhena/RO, a <strong>Tornearia Fresadora Universo</strong> nasceu com o propósito de suprir a demanda por peças e serviços metalmecânicos de alta qualidade na região.
+                </p>
+                <p class="about-text">
+                    Ao longo de mais de 30 anos de história, evoluímos lado a lado com a tecnologia, investindo em infraestrutura de 3.000m², processos CNC de alta performance, maquinários pesados e frota estruturada para fornecer soluções com agilidade em toda a região.
+                </p>
+                <div class="about-cta">
+                    <a href="historia.html" class="btn btn-accent">
+                        <i data-lucide="book-open"></i> Conheça nossa história
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. Catalog Teaser Section (Fundo Claro) -->
+    <!-- 5. Catálogo de Peças (Fundo Claro) -->
     <section class="catalog-section" id="catalog">
         <div class="container catalog-container">
             <div class="catalog-content">
-                <span class="section-badge">Catálogo Completo</span>
                 <h2 class="section-title">Conheça Nossa Variedade de Peças e Soluções Customizadas</h2>
                 <p>Fabricamos e recuperamos engrenagens de alta precisão, pinhões cônicos, eixos-árvore, camisas e hastes cromadas para cilindros hidráulicos, buchas de bronze e muito mais. Projetamos soluções robustas sob medida para indústrias, tratores, colheitadeiras e maquinários em geral.</p>
                 <a href="catalogo.html" class="btn btn-primary">
-                    <i data-lucide="book-open"></i> Visualizar Catálogo de Peças
+                    <i data-lucide="book-open"></i> Ver Catálogo
                 </a>
             </div>
             <div class="catalog-visual">
@@ -232,110 +232,216 @@
         </div>
     </section>
 
-    <!-- 8. Quem Somos / Sobre Nós (Fundo #222c84) -->
-    <section class="about-section" id="about">
-        <div class="container about-container">
-            <div class="about-content">
-                <span class="section-badge section-badge-yellow">Nossa História</span>
-                <h2 class="section-title" style="color: #ffffff;">Mais de Três Décadas de Compromisso com a Indústria</h2>
-                <p>Fundada em 1993 na cidade de Vilhena/RO, a Tornearia Fresadora Universo nasceu com o propósito de suprir a demanda por peças e serviços metalmecânicos de alta qualidade na região.</p>
-                <p>Ao longo de mais de 30 anos de história, evoluímos lado a lado com a tecnologia, investindo em maquinários modernos, processos CNC de alta performance e qualificação profissional técnica para fornecer soluções em toda a região.</p>
-                <div class="about-cta" style="margin-top: 30px;">
-                    <a href="historia.html" target="_blank" class="btn btn-accent">
-                        Conheça nossa história
-                    </a>
-                </div>
-            </div>
-            <div class="about-visual">
-                <div class="about-visual-wrapper">
-                    <img src="imagens/sobre_nos/empresa.png" alt="Estrutura Tornearia Universo">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. Maquinário (Fundo Claro) -->
-    <section class="machinery-section" id="machinery">
+    <!-- 6. Peças Usinadas sob Medida & Capacidades Técnicas (Fundo #f8fafc) -->
+    <section class="tech-components-section" id="componentes">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-badge">Parque Industrial</span>
-                <h2 class="section-title">Tecnologia e Precisão a Serviço da sua Produção</h2>
-                <p class="section-subtitle">Nossa oficina de 3.000m² conta com uma ampla variedade de máquinas industriais para garantir flexibilidade e agilidade.</p>
+                <h2 class="section-title">Fabricação de Peças e <span>Componentes sob Medida</span></h2>
+                <p class="section-subtitle">Do aço bruto à peça final acabada: detalhamento técnico dos componentes que fabricamos e recuperamos com rigor centesimal, ligas nobres e processos certificados.</p>
             </div>
 
-            <!-- Carrossel de Maquinário -->
-            <div class="machinery-carousel-wrapper">
-                <button class="carousel-control prev" id="machineryPrev" aria-label="Anterior">
+            <!-- Carrossel de Componentes: 2 em 2 -->
+            <div class="tech-carousel-wrapper">
+                <button class="carousel-arrow prev" id="techCarouselPrev" aria-label="Anterior">
                     <i data-lucide="chevron-left"></i>
                 </button>
+                
+                <div class="tech-carousel-track-container" id="techCarouselContainer">
+                    <div class="tech-carousel-track" id="techCarouselTrack">
+                        
+                        <!-- Card 1: Eixos, Flanges e Buchas -->
+                        <div class="tech-component-card">
+                            <div class="tech-card-header">
+                                <div class="tech-card-icon">
+                                    <i data-lucide="disc"></i>
+                                </div>
+                                <span class="tech-card-badge">Torno Convencional e CNC</span>
+                            </div>
+                            <div class="tech-card-body">
+                                <h3 class="tech-card-title">Eixos Longos, Flanges e Buchas</h3>
+                                <p class="tech-card-desc">
+                                    Usinagem pesada e de precisão de eixos de transmissão de grande comprimento, pontas de eixo e mangas de eixo com ajustes centesimais (h6/h7) para rolamentos e acoplamentos.
+                                </p>
+                                <div class="tech-specs-box">
+                                    <ul class="tech-specs-list">
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Barramentos de grande porte para eixos de até 4 metros</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Buchas especiais em bronze TM-23 e SAE 660 autolubrificantes</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Flanges industriais forjadas e usinadas em aço SAE 1045 e 4140</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Ajuste dimensional rigoroso para assentamento sem folgas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="machinery-carousel-container">
-                    <div class="machinery-carousel-track" id="machineryTrack">
-                        
-                        <div class="machinery-card">
-                            <div class="machinery-emoji">
-                                <i data-lucide="settings"></i>
+                        <!-- Card 2: Roscas Especiais, ACME e Sem-Fim -->
+                        <div class="tech-component-card">
+                            <div class="tech-card-header">
+                                <div class="tech-card-icon">
+                                    <i data-lucide="layers"></i>
+                                </div>
+                                <span class="tech-card-badge">Passos Especiais e Fusos</span>
                             </div>
-                            <h3>Tornos Convencionais e CNC</h3>
-                            <p>Diversas capacidades de barramento para usinar desde eixos curtos e pinos delicados até eixos industriais longos e camisas de grande diâmetro.</p>
-                        </div>
-                        
-                        <div class="machinery-card">
-                            <div class="machinery-emoji">
-                                <i data-lucide="wrench"></i>
+                            <div class="tech-card-body">
+                                <h3 class="tech-card-title">Roscas Especiais, ACME e Sem-Fim</h3>
+                                <p class="tech-card-desc">
+                                    Corte e abertura de roscas especiais com diferentes passos e perfis complexos para fusos industriais de elevação, prensas e transportadores helicoidais de carga.
+                                </p>
+                                <div class="tech-specs-box">
+                                    <ul class="tech-specs-list">
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Roscas quadradas e trapezoidais (ACME / Tr) com porcas sob medida</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Confecção de roscas sem-fim para silos, colheitadeiras e redutores</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Passos especiais métricos finos e polegadas (UNC, UNF, BSW)</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Controle metrológico de folga e passo com micrômetros de três pontas</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <h3>Fresadoras Universais e CNC</h3>
-                            <p>Equipamentos modernos com tecnologia para usinagem rápida de perfis complexos, reduzindo a margem de erros e entregando um acabamento impecável.</p>
                         </div>
-                        
-                        <div class="machinery-card">
-                            <div class="machinery-emoji">
-                                <i data-lucide="binary"></i>
+
+                        <!-- Card 3: Engrenagens, Estriados e Chavetas -->
+                        <div class="tech-component-card">
+                            <div class="tech-card-header">
+                                <div class="tech-card-icon">
+                                    <i data-lucide="settings"></i>
+                                </div>
+                                <span class="tech-card-badge">Fresagem e Módulos</span>
                             </div>
-                            <h3>Retíficas de Precisão</h3>
-                            <p>Essenciais para acabamentos cilíndricos e planos com tolerâncias centesimais (como retificação de hastes de cilindros hidráulicos).</p>
-                        </div>
-                        
-                        <div class="machinery-card">
-                            <div class="machinery-emoji">
-                                <i data-lucide="flame"></i>
+                            <div class="tech-card-body">
+                                <h3 class="tech-card-title">Engrenagens, Estriados e Chavetas</h3>
+                                <p class="tech-card-desc">
+                                    Divisão e fresagem precisa de engrenamentos mecânicos com caracóis e fresas módulo para transmissões industriais, caixas redutoras e implementos pesados.
+                                </p>
+                                <div class="tech-specs-box">
+                                    <ul class="tech-specs-list">
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Engrenagens de dentes retos e helicoidais de alto módulo</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Eixos estriados padronizados norma DIN 5480 e SAE para alta torção</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Rasgos de chaveta internos e externos sem folga mecânica</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Coroas em bronze fosforoso e pinhões de redutores temperados</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <h3>Solda Multiprocesso</h3>
-                            <p>Fontes de solda potentes (MIG/TIG/Eletrodo) prontas para operar em diversas ligas metálicas com precisão estrutural.</p>
                         </div>
-                        
-                        <div class="machinery-card">
-                            <div class="machinery-emoji">
-                                <i data-lucide="cpu"></i>
+
+                        <!-- Card 4: Cilindros Hidráulicos e Soldas Especiais -->
+                        <div class="tech-component-card">
+                            <div class="tech-card-header">
+                                <div class="tech-card-icon">
+                                    <i data-lucide="shield-check"></i>
+                                </div>
+                                <span class="tech-card-badge">Hidráulica e Caldeiraria</span>
                             </div>
-                            <h3>Prensas Hidráulicas</h3>
-                            <p>Estrutura de alta tonelagem para montagem, desmontagem e alinhamento de eixos e buchas com total segurança.</p>
+                            <div class="tech-card-body">
+                                <h3 class="tech-card-title">Cilindros Hidráulicos e Soldas</h3>
+                                <p class="tech-card-desc">
+                                    Recuperação completa de atuadores hidráulicos pesados e processos certificados de soldagem para peças sob severo estresse mecânico e térmico.
+                                </p>
+                                <div class="tech-specs-box">
+                                    <ul class="tech-specs-list">
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Retífica cilíndrica centesimal e banho de cromo duro em hastes</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Brunimento cruzado de camisas internas para rugosidade Ra &lt; 0.2µm</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Soldagem TIG/MIG em ferro fundido, aço inox e ligas de alumínio</li>
+                                        <li><i data-lucide="check" class="spec-check-icon"></i> Teste hidrostático de pressão e estanqueidade em bancada até 350 bar</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        
+
                     </div>
                 </div>
 
-                <button class="carousel-control next" id="machineryNext" aria-label="Próximo">
+                <button class="carousel-arrow next" id="techCarouselNext" aria-label="Próximo">
                     <i data-lucide="chevron-right"></i>
                 </button>
             </div>
 
-            <div class="carousel-indicators" id="machineryIndicators">
-                <span class="indicator active" data-slide="0"></span>
-                <span class="indicator" data-slide="1"></span>
-                <span class="indicator" data-slide="2"></span>
+            <!-- Indicadores (Dots) do Carrossel -->
+            <div class="tech-carousel-dots" id="techCarouselDots">
+                <span class="carousel-dot active" data-index="0"></span>
+                <span class="carousel-dot" data-index="1"></span>
+            </div>
+
+            <!-- Botão Central Único de Ação -->
+            <div class="tech-carousel-action text-center">
+                <a href="https://wa.me/556933213929?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20pe%C3%A7as%20usinadas." target="_blank" class="btn btn-accent btn-tech-main">
+                    <i data-lucide="message-square"></i> Orçar Peça
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 9.5. Localização e Visita (Fundo #222c84) -->
-    <section class="map-section" id="visite-nos">
+    <!-- 6.1 Nova Seção: Frota Própria, Caminhão Munck & Logística Leva e Traz -->
+    <section class="fleet-section" id="frota">
         <div class="container">
+            <div class="fleet-header text-center">
+                <h2 class="fleet-title">
+                    Não Pode Trazer a Peça Até Nós? <span>Nós Buscamos e Entregamos para Você!</span>
+                </h2>
+                <p class="fleet-subtitle">
+                    Dispomos de frota própria e caminhão equipado com guindauto Munck para coleta especializada, içamento de componentes pesados e devolução técnica direto na sua fazenda, canteiro ou indústria.
+                </p>
+            </div>
+
+            <div class="fleet-grid">
+                <!-- Coluna Visual: As 3 Fotos Exclusivas da Frota (1 Principal + 2 Secundárias Interativas sem Repetição) -->
+                <div class="fleet-visual">
+                    <div class="fleet-main-wrapper">
+                        <img id="fleetMainImage" src="imagens/sobre_nos/Fachada%20da%20Tornearia%20Universo%20com%20Frota.png" alt="Fachada da Tornearia Universo e Frota Própria">
+                    </div>
+                    <div class="fleet-thumbs-grid">
+                        <div class="fleet-thumb-card" onclick="selectFleetImage(1)" title="Clique para visualizar">
+                            <img id="fleetThumb1" src="imagens/logo/Cami%C3%B5es%20Universo%20Sob%20C%C3%A9u%20Dram%C3%A1tico.png" alt="Caminhões Munck e Pesados da Universo">
+                        </div>
+                        <div class="fleet-thumb-card" onclick="selectFleetImage(2)" title="Clique para visualizar">
+                            <img id="fleetThumb2" src="imagens/logo/Cami%C3%B5es%20de%20Trabalho%20Universo%20Conjunto.png" alt="Caminhonetes Utilitárias de Coleta e Entrega">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna de Benefícios: Os 2 Cards de Serviços e o Botão do WhatsApp -->
+                <div class="fleet-content">
+                    <div class="fleet-cards-list">
+                        <!-- Card 1: Serviço de Munck -->
+                        <div class="fleet-feature-card">
+                            <div class="fleet-feature-icon">
+                                <i data-lucide="anchor"></i>
+                            </div>
+                            <div class="fleet-feature-info">
+                                <h3>Serviço Especializado de Munck</h3>
+                                <p>Caminhão equipado com guindauto para içamento, carga e descarga de componentes pesados (redutores, cilindros e eixos de até 4 metros) no seu próprio local de trabalho, com total segurança.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Leva e Traz -->
+                        <div class="fleet-feature-card">
+                            <div class="fleet-feature-icon">
+                                <i data-lucide="repeat"></i>
+                            </div>
+                            <div class="fleet-feature-info">
+                                <h3>Logística "Leva e Traz" Especializada</h3>
+                                <p>Sua equipe não precisa se preocupar com fretes de terceiros ou carretos inadequados. Nós retiramos a peça danificada no seu local e entregamos usinada, balanceada e pronta para montagem.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botão para entrar em contato no WhatsApp -->
+                    <div class="fleet-action-wrapper">
+                        <a href="https://wa.me/556933213929?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20atendimento%20de%20frota%20e%20munck." target="_blank" class="btn btn-accent fleet-whatsapp-btn">
+                            <i data-lucide="message-square"></i> Falar Conosco
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Seção Unificada: Localização & Avaliações Google (Fundo #222c84) -->
+    <section class="map-section unified-location-reviews" id="visite-nos">
+        <div class="container">
+            
+            <!-- Parte 1: Estrutura Física & Mapa Interativo -->
             <div class="map-grid">
                 <div class="map-info">
-                    <span class="map-badge">Agende uma Visita</span>
-                    <h2 class="map-title" style="color: #ffffff;">Venha conhecer a nossa estrutura</h2>
-                    <p class="map-desc" style="color: rgba(255, 255, 255, 0.85);">
+                    <h2 class="map-title">Venha conhecer a nossa estrutura</h2>
+                    <p class="map-desc">
                         Nossa oficina e centro de usinagem são preparados para realizar fabricações e reparos de alta precisão com estrutura robusta. Venha nos visitar pessoalmente para conhecer de perto nossa infraestrutura e equipe técnica.
                     </p>
                     
@@ -345,8 +451,8 @@
                                 <i data-lucide="map-pin"></i>
                             </div>
                             <div class="map-detail-content">
-                                <h3 style="color: #ffffff;">Endereço</h3>
-                                <p style="color: rgba(255, 255, 255, 0.75);">Av. Celso Mazutti, 2821 – Jardim América, Vilhena - RO</p>
+                                <h3>Endereço</h3>
+                                <p>Av. Celso Mazutti, 2821 – Jardim América, Vilhena - RO</p>
                             </div>
                         </div>
                         
@@ -355,8 +461,8 @@
                                 <i data-lucide="clock"></i>
                             </div>
                             <div class="map-detail-content">
-                                <h3 style="color: #ffffff;">Horários de Atendimento</h3>
-                                <p style="color: rgba(255, 255, 255, 0.75);">
+                                <h3>Horários de Atendimento</h3>
+                                <p>
                                     Segunda a Sexta: 07:30 às 11:30 e das 13:30 às 17:30<br>
                                     Atendimento local e suporte logístico interestadual
                                 </p>
@@ -365,7 +471,7 @@
                     </div>
                     
                     <a href="https://wa.me/556933213929" target="_blank" class="btn btn-accent" style="margin-top: 20px;">
-                        Falar com Consultor no WhatsApp <i data-lucide="message-square"></i>
+                        Chamar WhatsApp <i data-lucide="message-square"></i>
                     </a>
                 </div>
                 
@@ -373,15 +479,74 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.6580260450273!2d-60.1482217!3d-12.735718199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93b96bb15a1f60c3%3A0x86f4cffc55fb0799!2sAv.%20Celso%20Mazutti%2C%202821%20-%20Jardim%20Am%C3%A9rica%2C%20Vilhena%20-%20RO%2C%2076980-811!5e0!3m2!1spt-PT!2sbr!4v1782859675849!5m2!1spt-PT!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>
+
+            <!-- Parte 2: Card de Avaliações Google (id="avaliacoes" mantido para navegação) -->
+            <div class="unified-reviews-block" id="avaliacoes">
+                <!-- Card de Avaliação Google Sério e de Alta Credibilidade -->
+                <div class="google-summary-card">
+                    <div class="google-score-box">
+                        <div class="google-icon-circle">
+                            <svg viewBox="0 0 24 24" width="34" height="34">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                            </svg>
+                        </div>
+                        <div class="google-score-num">5.0</div>
+                        <div class="google-score-meta">
+                            <div class="google-stars">
+                                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            </div>
+                            <div class="google-score-label">Classificação máxima baseada em avaliações reais no Google Maps</div>
+                            <p class="google-invite-text">Já foi ou é nosso cliente ou fez serviços conosco? Avalie a gente!</p>
+                            <div class="google-verified-tag">
+                                <i data-lucide="shield-check"></i>
+                                <span>Perfil Oficial Verificado no Google</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="google-actions">
+                        <a href="https://www.google.com/search?q=tornaria+universo&sourceid=chrome&ie=UTF-8#lrd=0x93b96bb6f5e956f9:0xd53d9648a9190dc6,3,,,," target="_blank" rel="noopener noreferrer" class="btn-google-review">
+                            <i data-lucide="edit-3"></i> Avaliar Google
+                        </a>
+                        <a href="https://www.google.com/search?q=tornaria+universo&sourceid=chrome&ie=UTF-8#lrd=0x93b96bb6f5e956f9:0xd53d9648a9190dc6,1,,,," target="_blank" rel="noopener noreferrer" class="btn-google-outline">
+                            <i data-lucide="map-pin"></i> Ver Avaliações
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- 10. FAQ Accordion (Fundo Claro Alternativo) -->
+    <!-- 8. Bloco de Chamada para Ação (Título CTA, Subtítulo e Botão) -->
+    <section class="cta-section" id="orcamento-cta">
+        <div class="container cta-container-simple">
+            <h2 class="cta-title-simple">
+                Sua Produção Não Pode Parar. <span>Faça Seu Orçamento Agora</span>
+            </h2>
+            <p class="cta-subtitle-simple">
+                Fale com nossa equipe técnica, apresente suas medidas ou projeto e receba atendimento imediato com avaliação dimensional precisa.
+            </p>
+            <div class="cta-btn-wrapper">
+                <a href="https://wa.me/556933213929?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20imediato%20para%20minha%20pe%C3%A7a." target="_blank" class="btn btn-accent btn-cta-simple">
+                    <i data-lucide="message-square"></i> Solicitar Orçamento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Perguntas Frequentes (FAQ) -->
     <section class="faq-section" id="faq">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-badge">Dúvidas Comuns</span>
-                <h2 class="section-title">Perguntas Frequentes sobre Nossos Serviços</h2>
+                <h2 class="section-title">Perguntas Frequentes</h2>
                 <p class="section-subtitle">Tire suas dúvidas rápidas sobre processos de fabricação, materiais e prazos.</p>
             </div>
 
@@ -462,25 +627,30 @@
                         <i data-lucide="chevron-down" class="faq-chevron"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Você pode trazer a sua peça ou desenho técnico diretamente em nossa oficina em Vilhena/RO, ou enviar fotos detalhadas, medidas e especificações pelo nosso WhatsApp (69) 3321-3929. Nossa equipe técnica retornará rapidamente.</p>
+                        <p>Você pode trazer a sua peça ou desenho técnico diretamente em nossa oficina em Vilhena/RO, ou enviar as medidas e especificações pelo nosso WhatsApp (69) 3321-3929. Nossa equipe técnica retornará rapidamente.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 11. Footer (Fundo Amarelo Reorganizado) -->
+    <!-- 10. Footer (Fundo Amarelo Reorganizado) -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-block main-block">
                 <a href="#" class="logo-footer">
-                    <img src="imagens/logo/logo.png" alt="Tornearia Fresadora Universo">
+                    <img src="imagens/logo/Logo%20oficial.png" alt="Tornearia Fresadora Universo">
                 </a>
                 <p class="footer-about">Desde 1993 oferecendo soluções em metalmecânica, tornearia convencional/CNC, soldas especiais e recuperação técnica com máxima precisão e durabilidade.</p>
                 <div class="footer-socials">
-                    <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                    <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-                    <a href="https://wa.me/556933213929" target="_blank" class="social-icon" aria-label="phone-call"><i data-lucide="phone-call"></i></a>
+                    <a href="https://www.instagram.com/torneariauniverso/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Siga a Tornearia Universo no Instagram @torneariauniverso">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <span>@torneariauniverso</span>
+                    </a>
                 </div>
             </div>
             
@@ -488,10 +658,11 @@
                 <h4 class="footer-title">Links Úteis</h4>
                 <ul class="footer-links">
                     <li><a href="#hero">Início</a></li>
-                    <li><a href="#about">Empresa</a></li>
                     <li><a href="#services">Serviços</a></li>
+                    <li><a href="#about">Empresa</a></li>
+                    <li><a href="historia.html">Nossa História</a></li>
+                    <li><a href="#catalog">Catálogo</a></li>
                     <li><a href="#visite-nos">Localização</a></li>
-                    <li><a href="#faq">Dúvidas</a></li>
                 </ul>
             </div>
             
@@ -528,8 +699,13 @@
         
         <div class="footer-bottom">
             <div class="footer-bottom-container">
-                <p>&copy; 2026 Tornearia Fresadora Universo. Todos os direitos reservados.</p>
-                <p>Desenvolvido com foco em alta performance e solidez industrial.</p>
+                <p>&copy; 2026 Tornearia Fresadora Universo. Todos os direitos reservados. · <a href="termos-de-uso.html" class="legal-link">Termos de Uso</a> · <a href="politica-de-privacidade.html" class="legal-link">Privacidade (LGPD)</a></p>
+                <div class="developer-credit">
+                    <span>Desenvolvido por</span>
+                    <a href="https://orionxbrasil.com/" target="_blank" rel="noopener noreferrer" class="orionx-badge" aria-label="OrionX Brasil - Desenvolvimento Web">
+                        <img src="imagens/logo/orionx.png" alt="OrionX Brasil" class="orionx-logo">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
@@ -573,62 +749,193 @@
             }
         });
 
-        // Carrossel de Maquinários
-        const machineryTrack = document.getElementById('machineryTrack');
-        const machineryPrev = document.getElementById('machineryPrev');
-        const machineryNext = document.getElementById('machineryNext');
-        const machineryIndicators = document.querySelectorAll('#machineryIndicators .indicator');
-        
-        let machineryIndex = 0;
-        const totalCards = document.querySelectorAll('.machinery-card').length;
 
-        function getMachineryCardWidth() {
-            const card = document.querySelector('.machinery-card');
-            return card.getBoundingClientRect().width + 20; // inclui as margens horizontais (10px cada)
-        }
 
-        function updateMachineryCarousel() {
-            const cardWidth = getMachineryCardWidth();
-            machineryTrack.style.transform = `translateX(-${machineryIndex * cardWidth}px)`;
+
+
+        // Carrossel de Componentes Técnicos (Mostrar de 2 em 2)
+        function initTechCarousel() {
+            const track = document.getElementById('techCarouselTrack');
+            const container = document.getElementById('techCarouselContainer');
+            const prevBtn = document.getElementById('techCarouselPrev');
+            const nextBtn = document.getElementById('techCarouselNext');
+            const dotsContainer = document.getElementById('techCarouselDots');
             
-            // Atualiza indicadores
-            machineryIndicators.forEach((ind, index) => {
-                if (index === machineryIndex) {
-                    ind.classList.add('active');
+            if (!track || !container || !prevBtn || !nextBtn || !dotsContainer) return;
+
+            const cards = track.querySelectorAll('.tech-component-card');
+            const totalCards = cards.length;
+            let currentIndex = 0;
+
+            function getCardsPerView() {
+                return window.innerWidth < 768 ? 1 : 2;
+            }
+
+            function getMaxIndex() {
+                const perView = getCardsPerView();
+                return Math.max(0, Math.ceil(totalCards / perView) - 1);
+            }
+
+            function updateDots() {
+                const maxIndex = getMaxIndex();
+                dotsContainer.innerHTML = '';
+                for (let i = 0; i <= maxIndex; i++) {
+                    const dot = document.createElement('span');
+                    dot.className = `carousel-dot ${i === currentIndex ? 'active' : ''}`;
+                    dot.setAttribute('data-index', i);
+                    dot.setAttribute('aria-label', `Ir para slide ${i + 1}`);
+                    dot.addEventListener('click', () => {
+                        currentIndex = i;
+                        updateCarousel();
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function updateCarousel() {
+                const maxIndex = getMaxIndex();
+                if (currentIndex > maxIndex) currentIndex = maxIndex;
+                if (currentIndex < 0) currentIndex = 0;
+
+                const perView = getCardsPerView();
+                const containerWidth = container.offsetWidth;
+                const gap = 28;
+                
+                const step = containerWidth + gap;
+                track.style.transform = `translateX(-${currentIndex * step}px)`;
+
+                const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === currentIndex);
+                });
+
+                prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+                nextBtn.style.opacity = currentIndex === maxIndex ? '0.5' : '1';
+            }
+
+            nextBtn.addEventListener('click', () => {
+                const maxIndex = getMaxIndex();
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
                 } else {
-                    ind.classList.remove('active');
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                const maxIndex = getMaxIndex();
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = maxIndex;
+                }
+                updateCarousel();
+            });
+
+            let startX = 0;
+            let currentX = 0;
+            let isTouching = false;
+
+            container.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isTouching = true;
+            }, { passive: true });
+
+            container.addEventListener('touchmove', (e) => {
+                if (!isTouching) return;
+                currentX = e.touches[0].clientX;
+            }, { passive: true });
+
+            container.addEventListener('touchend', () => {
+                if (!isTouching) return;
+                isTouching = false;
+                const diff = startX - currentX;
+                if (Math.abs(diff) > 40) {
+                    const maxIndex = getMaxIndex();
+                    if (diff > 0) {
+                        currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
+                    } else {
+                        currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIndex;
+                    }
+                    updateCarousel();
                 }
             });
+
+            window.addEventListener('resize', () => {
+                updateDots();
+                updateCarousel();
+            });
+
+            updateDots();
+            updateCarousel();
         }
 
-        machineryNext.addEventListener('click', () => {
-            const cardsVisible = window.innerWidth < 768 ? 1 : (window.innerWidth < 992 ? 2 : 3);
-            const limit = totalCards - cardsVisible;
-            if (machineryIndex < limit) {
-                machineryIndex++;
-            } else {
-                machineryIndex = 0; // Loop para o início
-            }
-            updateMachineryCarousel();
-        });
+        initTechCarousel();
 
-        machineryPrev.addEventListener('click', () => {
-            const cardsVisible = window.innerWidth < 768 ? 1 : (window.innerWidth < 992 ? 2 : 3);
-            const limit = totalCards - cardsVisible;
-            if (machineryIndex > 0) {
-                machineryIndex--;
-            } else {
-                machineryIndex = limit; // Loop para o final
-            }
-            updateMachineryCarousel();
-        });
+        // Animação Contagem dos Números das Estatísticas (Count-up suave)
+        function initStatsCounter() {
+            const statsSection = document.getElementById('stats');
+            if (!statsSection) return;
 
-        machineryIndicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                machineryIndex = index;
-                updateMachineryCarousel();
+            const statNumbers = statsSection.querySelectorAll('.stat-number');
+            let hasAnimated = false;
+
+            function animateValue(el, target, duration, prefix, suffix, isThousand) {
+                let startTimestamp = null;
+                const start = 0;
+
+                function step(timestamp) {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    // Easing suave (easeOutCubic)
+                    const easeProgress = 1 - Math.pow(1 - progress, 3);
+                    const currentVal = Math.floor(start + (target - start) * easeProgress);
+
+                    let formattedNumber = isThousand 
+                        ? currentVal.toLocaleString('pt-BR') 
+                        : currentVal.toString();
+
+                    el.textContent = `${prefix}${formattedNumber}${suffix}`;
+
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        let finalFormatted = isThousand 
+                            ? target.toLocaleString('pt-BR') 
+                            : target.toString();
+                        el.textContent = `${prefix}${finalFormatted}${suffix}`;
+                    }
+                }
+
+                window.requestAnimationFrame(step);
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        hasAnimated = true;
+                        statNumbers.forEach(numEl => {
+                            const target = parseInt(numEl.getAttribute('data-target'), 10);
+                            const prefix = numEl.getAttribute('data-prefix') || '';
+                            const suffix = numEl.getAttribute('data-suffix') || '';
+                            const isThousand = numEl.getAttribute('data-format') === 'thousand';
+                            
+                            if (!isNaN(target)) {
+                                animateValue(numEl, target, 2000, prefix, suffix, isThousand);
+                            }
+                        });
+                        observer.unobserve(statsSection);
+                    }
+                });
+            }, {
+                threshold: 0.25
             });
-        });
+
+            observer.observe(statsSection);
+        }
+
+        initStatsCounter();
 
         // FAQ Accordion
         const faqItems = document.querySelectorAll('.faq-item');
@@ -651,11 +958,125 @@
             });
         });
 
-        // Ajusta carrosséis em redimensionamento
-        window.addEventListener('resize', () => {
-            machineryIndex = 0;
-            updateMachineryCarousel();
-        });
+        // Slideshow automático e dinâmico nos Cards de Serviços e Frota (30% mais lento: 5.2s)
+        function initServiceSliders() {
+            const sliders = document.querySelectorAll('.service-slider');
+            if (!sliders.length) return;
+
+            sliders.forEach((slider, sliderIndex) => {
+                const slides = slider.querySelectorAll('.service-slide');
+                if (slides.length <= 1) return;
+
+                // Contêiner com indicadores visuais sutis
+                const dotsContainer = document.createElement('div');
+                dotsContainer.className = 'service-card-dots';
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.className = `dot ${i === 0 ? 'active' : ''}`;
+                    dotsContainer.appendChild(dot);
+                });
+                slider.appendChild(dotsContainer);
+                const dots = dotsContainer.querySelectorAll('.dot');
+
+                // Escolhe imagem inicial aleatória ao recarregar a página (variedade instantânea)
+                let currentIndex = Math.floor(Math.random() * slides.length);
+
+                function showSlide(index) {
+                    slides.forEach((s, idx) => {
+                        if (idx === index) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                    dots.forEach((d, idx) => {
+                        if (idx === index) {
+                            d.classList.add('active');
+                        } else {
+                            d.classList.remove('active');
+                        }
+                    });
+                }
+
+                // Exibe o slide sorteado imediatamente
+                showSlide(currentIndex);
+
+                // Pausa durante o hover do usuário para melhor apreciação dos detalhes técnicos
+                let isHovered = false;
+                const card = slider.closest('.service-card') || slider;
+                card.addEventListener('mouseenter', () => { isHovered = true; });
+                card.addEventListener('mouseleave', () => { isHovered = false; });
+
+                // Troca a cada 5.2 segundos (30% mais lento) com delay escalonado
+                const changeInterval = 5200;
+                const staggerDelay = (sliderIndex * 1100) % 3300;
+
+                setTimeout(() => {
+                    setInterval(() => {
+                        if (!isHovered) {
+                            currentIndex = (currentIndex + 1) % slides.length;
+                            showSlide(currentIndex);
+                        }
+                    }, changeInterval);
+                }, staggerDelay);
+            });
+        }
+
+        initServiceSliders();
+
+        // Galeria da Frota (3 Fotos Exclusivas: 1 Principal + 2 Secundárias Interativas sem Repetição)
+        const fleetPhotos = [
+            { src: 'imagens/sobre_nos/Fachada%20da%20Tornearia%20Universo%20com%20Frota.png', alt: 'Fachada da Tornearia Universo e Frota Própria' },
+            { src: 'imagens/logo/Cami%C3%B5es%20Universo%20Sob%20C%C3%A9u%20Dram%C3%A1tico.png', alt: 'Caminhões Munck e Pesados da Universo' },
+            { src: 'imagens/logo/Cami%C3%B5es%20de%20Trabalho%20Universo%20Conjunto.png', alt: 'Caminhonetes Utilitárias de Coleta e Entrega' }
+        ];
+
+        let activeFleetIndex = 0;
+        let isFleetHovered = false;
+
+        function renderFleetGallery(newIndex) {
+            activeFleetIndex = newIndex;
+            const mainImg = document.getElementById('fleetMainImage');
+            const thumb1 = document.getElementById('fleetThumb1');
+            const thumb2 = document.getElementById('fleetThumb2');
+            if (!mainImg || !thumb1 || !thumb2) return;
+
+            mainImg.style.opacity = '0.35';
+            
+            setTimeout(() => {
+                mainImg.src = fleetPhotos[activeFleetIndex].src;
+                mainImg.alt = fleetPhotos[activeFleetIndex].alt;
+                mainImg.style.opacity = '1';
+
+                const remainingIndices = [0, 1, 2].filter(idx => idx !== activeFleetIndex);
+                
+                thumb1.src = fleetPhotos[remainingIndices[0]].src;
+                thumb1.alt = fleetPhotos[remainingIndices[0]].alt;
+                thumb1.parentElement.setAttribute('onclick', `selectFleetImage(${remainingIndices[0]})`);
+
+                thumb2.src = fleetPhotos[remainingIndices[1]].src;
+                thumb2.alt = fleetPhotos[remainingIndices[1]].alt;
+                thumb2.parentElement.setAttribute('onclick', `selectFleetImage(${remainingIndices[1]})`);
+            }, 160);
+        }
+
+        function selectFleetImage(index) {
+            renderFleetGallery(index);
+        }
+
+        const fleetVisualEl = document.querySelector('.fleet-visual');
+        if (fleetVisualEl) {
+            fleetVisualEl.addEventListener('mouseenter', () => { isFleetHovered = true; });
+            fleetVisualEl.addEventListener('mouseleave', () => { isFleetHovered = false; });
+            
+            // Troca a cada 5.2s (30% mais lento), pausando durante o hover
+            setInterval(() => {
+                if (!isFleetHovered) {
+                    const nextIndex = (activeFleetIndex + 1) % fleetPhotos.length;
+                    renderFleetGallery(nextIndex);
+                }
+            }, 5200);
+        }
     </script>
 </body>
 </html>
