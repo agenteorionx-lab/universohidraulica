@@ -50,6 +50,7 @@ jobs:
                 --label "traefik.http.routers.universohidraulica.rule=Host(\`torneariauniverso.com.br\`) || Host(\`www.torneariauniverso.com.br\`) || Host(\`universohidraulica.com.br\`) || Host(\`www.universohidraulica.com.br\`)" \
                 --label "traefik.http.routers.universohidraulica.entrypoints=websecure" \
                 --label "traefik.http.routers.universohidraulica.tls=true" \
+                --label "traefik.http.routers.universohidraulica.tls.certresolver=le" \
                 --label "traefik.http.services.universohidraulica.loadbalancer.server.port=80" \
                 nginx:alpine
             fi
