@@ -1,0 +1,57 @@
+name: Deploy Automático Contabo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy para a Contabo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Código
+        uses: actions/checkout@v4
+
+      - name: Sincronizar Arquivos via SCP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          source: "index.html,index.css,catalogo.html,historia.html,politica-de-privacidade.html,termos-de-uso.html,imagens"
+          target: "/var/www/universohidraulica"
+
+      - name: Deploy no Docker Swarm via Traefik na Contabo
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: |
+            echo "=== INICIANDO DEPLOY NO DOCKER SWARM INTEGRADO AO TRAEFIK ==="
+
+            # 1. Garantir pasta e permissões do site na Contabo
+            mkdir -p /var/www/universohidraulica
+            chmod -R 755 /var/www/universohidraulica
+
+            # 2. Se o serviço já existe, atualiza; senão, cria o serviço no Swarm
+            if docker service inspect universohidraulica_web >/dev/null 2>&1; then
+              echo "Atualizando serviço existente no Swarm..."
+              docker service update --force universohidraulica_web
+            else
+              echo "Criando serviço Docker Swarm integrado ao Traefik com TLS ativo..."
+              docker service create \
+                --name universohidraulica_web \
+                --network traefik_public \
+                --mount type=bind,source=/var/www/universohidraulica,target=/usr/share/nginx/html,readonly \
+                --label "traefik.enable=true" \
+                --label "traefik.http.routers.universohidraulica.rule=Host(\`torneariauniverso.com.br\`) || Host(\`www.torneariauniverso.com.br\`) || Host(\`universohidraulica.com.br\`) || Host(\`www.universohidraulica.com.br\`)" \
+                --label "traefik.http.routers.universohidraulica.entrypoints=websecure" \
+                --label "traefik.http.routers.universohidraulica.tls=true" \
+                --label "traefik.http.services.universohidraulica.loadbalancer.server.port=80" \
+                nginx:alpine
+            fi
+
+            echo "=== DEPLOY EXECUTADO COM SUCESSO ==="
