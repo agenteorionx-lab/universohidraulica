@@ -36,10 +36,17 @@ jobs:
             mkdir -p /var/www/universohidraulica
             chmod -R 755 /var/www/universohidraulica
 
-            # 2. Se o serviço já existe, atualiza; senão, cria o serviço no Swarm
+            # 2. Se o serviço já existe, atualiza labels e força reload; senão, cria o serviço no Swarm
             if docker service inspect universohidraulica_web >/dev/null 2>&1; then
-              echo "Atualizando serviço existente no Swarm..."
-              docker service update --force universohidraulica_web
+              echo "Atualizando serviço existente no Swarm e aplicando regras de domínio..."
+              docker service update \
+                --label-add "traefik.enable=true" \
+                --label-add "traefik.http.routers.universohidraulica.rule=Host(\`torneariauniverso.com.br\`)" \
+                --label-add "traefik.http.routers.universohidraulica.entrypoints=websecure" \
+                --label-add "traefik.http.routers.universohidraulica.tls=true" \
+                --label-add "traefik.http.routers.universohidraulica.tls.certresolver=le" \
+                --label-add "traefik.http.services.universohidraulica.loadbalancer.server.port=80" \
+                --force universohidraulica_web
             else
               echo "Criando serviço Docker Swarm integrado ao Traefik com TLS ativo..."
               docker service create \
@@ -47,7 +54,7 @@ jobs:
                 --network traefik_public \
                 --mount type=bind,source=/var/www/universohidraulica,target=/usr/share/nginx/html,readonly \
                 --label "traefik.enable=true" \
-                --label "traefik.http.routers.universohidraulica.rule=Host(\`torneariauniverso.com.br\`) || Host(\`www.torneariauniverso.com.br\`) || Host(\`universohidraulica.com.br\`) || Host(\`www.universohidraulica.com.br\`)" \
+                --label "traefik.http.routers.universohidraulica.rule=Host(\`torneariauniverso.com.br\`)" \
                 --label "traefik.http.routers.universohidraulica.entrypoints=websecure" \
                 --label "traefik.http.routers.universohidraulica.tls=true" \
                 --label "traefik.http.routers.universohidraulica.tls.certresolver=le" \
