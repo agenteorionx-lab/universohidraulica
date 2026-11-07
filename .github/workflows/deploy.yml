@@ -19,7 +19,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          source: "index.html,index.css,catalogo.html,historia.html,politica-de-privacidade.html,termos-de-uso.html,imagens"
+          source: "index.html,index.css,catalogo.html,historia.html,politica-de-privacidade.html,termos-de-uso.html,logo.png,imagens"
           target: "/var/www/universohidraulica"
 
       - name: Deploy no Docker Swarm via Traefik na Contabo
